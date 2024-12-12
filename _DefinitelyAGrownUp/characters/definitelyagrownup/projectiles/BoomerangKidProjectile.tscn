@@ -1,0 +1,304 @@
+[gd_scene load_steps=35 format=2]
+
+[ext_resource path="res://projectile/BaseProjectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/BoomerangKidProjectile.gd" type="Script" id=2]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/boomerang_projectile_0002.png" type="Texture" id=3]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=4]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/boomerang_projectile_0006.png" type="Texture" id=5]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/boomerang_projectile_0005.png" type="Texture" id=6]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/boomerang_projectile_0008.png" type="Texture" id=7]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/boomerang_projectile_0007.png" type="Texture" id=8]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/boomerang_projectile_0003.png" type="Texture" id=9]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/boomerang_projectile_0001.png" type="Texture" id=10]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/boomerang_projectile_0004.png" type="Texture" id=11]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/BaseBoomerangKidProjectile.gd" type="Script" id=12]
+[ext_resource path="res://sound/common/explosion4.wav" type="AudioStream" id=13]
+[ext_resource path="res://sound/common/slash2.wav" type="AudioStream" id=14]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/BabyExplode.gd" type="Script" id=15]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_explosion/baby_explosion_4.png" type="Texture" id=16]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_explosion/baby_explosion_3.png" type="Texture" id=17]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_explosion/baby_explosion_5.png" type="Texture" id=18]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_explosion/baby_explosion_1.png" type="Texture" id=19]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_explosion/baby_explosion_2.png" type="Texture" id=20]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/BabyBoomerangParticle.tscn" type="PackedScene" id=21]
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=22]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang_standing/boomerang_projectile_standing_0002.png" type="Texture" id=23]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang_standing/boomerang_projectile_standing_0001.png" type="Texture" id=24]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/BabyStanding.gd" type="Script" id=25]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/BabyPunch.gd" type="Script" id=26]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/BabyKick.gd" type="Script" id=27]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_punch/baby_punch_0001.png" type="Texture" id=28]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_kick/baby_kick_0001.png" type="Texture" id=29]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_punch/baby_punch_0002.png" type="Texture" id=30]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_kick/baby_kick_0002.png" type="Texture" id=31]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/SuperBabyPunch.gd" type="Script" id=32]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Explode",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "Kick",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "Punch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "Standing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "SuperPunch",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShaderMaterial" id=2]
+resource_local_to_scene = true
+shader = ExtResource( 22 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[node name="BaseBoomerangKidProjectile" instance=ExtResource( 1 )]
+z_index = 2
+script = ExtResource( 12 )
+max_air_speed = "30"
+max_fall_speed = "30"
+_c_Comeback_Options = 0
+retrieve_despawn_cooldown = 16
+retrieve_despawn_distance = "24"
+come_back_turn_speed = "5"
+come_back_speed = "16"
+base_baby_scale = 1.0
+base_baby_damage_modifier = 1.0
+super_baby_mode_transformation_ticks = 15
+super_baby_scale = 2.0
+super_baby_damage_modifier = 2.0
+
+[node name="Flip" parent="." index="0"]
+position = Vector2( 0, -9 )
+
+[node name="Sprite" parent="Flip" index="0"]
+frames = SubResource( 1 )
+animation = "SuperPunch"
+
+[node name="ParticleEffect" parent="Flip/Particles" index="0" instance=ExtResource( 21 )]
+show_behind_parent = false
+material = SubResource( 2 )
+z_index = -4
+
+[node name="Sounds" parent="." index="1"]
+position = Vector2( 0, -9 )
+
+[node name="CollisionBox" parent="." index="2"]
+y = -9
+width = 8
+height = 8
+
+[node name="Hurtbox" parent="." index="3"]
+y = -9
+width = 12
+height = 12
+
+[node name="StateMachine" parent="." index="4"]
+position = Vector2( 0, -9 )
+
+[node name="Default" parent="StateMachine" index="0"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+apply_custom_x_fric = true
+apply_custom_y_fric = true
+apply_custom_grav = true
+sprite_animation = "default"
+anim_length = 28
+sprite_anim_length = 8
+ticks_per_frame = 4
+loop_animation = true
+_c_Projectile_Options = 0
+movement_speed = "16"
+boomerang_max_distance = "500"
+lifetime = 99999
+relative_data_dir = false
+num_hits = 99999
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Default" index="0"]
+z_index = 1000
+script = ExtResource( 4 )
+width = 8
+height = 8
+damage = 30
+di_modifier = "0.8"
+knockback = "6.0"
+start_tick = 1
+active_ticks = 1
+always_on = true
+
+[node name="Explode" type="Node2D" parent="StateMachine" index="1"]
+script = ExtResource( 15 )
+apply_custom_x_fric = true
+apply_custom_y_fric = true
+apply_custom_grav = true
+anim_length = 20
+ticks_per_frame = 2
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Explode" index="0"]
+z_index = 1000
+script = ExtResource( 4 )
+width = 32
+height = 32
+damage = 80
+hitstun_ticks = 24
+hitlag_ticks = 1
+victim_hitlag = 10
+damage_proration = 1
+whiff_sound = ExtResource( 13 )
+hit_sound = ExtResource( 14 )
+dir_y = "-0.6"
+knockback = "9.0"
+launch_reversible = true
+send_away_from_center = true
+grounded_hit_state = "HurtAerial"
+start_tick = 8
+active_ticks = 4
+
+[node name="Standing" type="Node2D" parent="StateMachine" index="2"]
+script = ExtResource( 25 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+fallback_state = "Standing"
+anim_length = 24
+ticks_per_frame = 16
+loop_animation = true
+endless = true
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Standing" index="0"]
+z_index = 1000
+script = ExtResource( 4 )
+width = 8
+height = 8
+damage = 30
+di_modifier = "0.5"
+allowed_to_hit_own_team = false
+dir_x = "0.0"
+knockback = "3.0"
+start_tick = 1
+active_ticks = 1
+always_on = true
+
+[node name="Punch" type="Node2D" parent="StateMachine" index="3"]
+script = ExtResource( 26 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+fallback_state = "Standing"
+anim_length = 12
+ticks_per_frame = 2
+enter_force_dir_y = "-1.0"
+enter_force_speed = "9.0"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Punch" index="0"]
+z_index = 1000
+script = ExtResource( 4 )
+width = 8
+height = 8
+damage = 30
+di_modifier = "0.5"
+dir_x = "0.2"
+knockback = "4.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 3
+active_ticks = 9
+
+[node name="SuperPunch" type="Node2D" parent="StateMachine" index="4"]
+script = ExtResource( 32 )
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+apply_grav = true
+reset_x_momentum = true
+fallback_state = "Standing"
+anim_length = 32
+ticks_per_frame = 16
+force_dir_x = "1.0"
+force_dir_y = "-0.4"
+force_speed = "12.0"
+force_tick = 16
+enter_force_dir_x = "-1.0"
+enter_force_dir_y = "-0.2"
+enter_force_speed = "4.0"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/SuperPunch" index="0"]
+z_index = 1000
+script = ExtResource( 4 )
+width = 8
+height = 8
+damage = 70
+di_modifier = "0.5"
+dir_x = "0.5"
+dir_y = "-0.5"
+knockback = "5.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 20
+active_ticks = 8
+
+[node name="Kick" type="Node2D" parent="StateMachine" index="5"]
+script = ExtResource( 27 )
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+apply_grav = true
+reset_x_momentum = true
+fallback_state = "Standing"
+anim_length = 12
+ticks_per_frame = 2
+enter_force_dir_x = "1.0"
+enter_force_speed = "12.0"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Kick" index="0"]
+z_index = 1000
+script = ExtResource( 4 )
+width = 8
+height = 8
+damage = 30
+di_modifier = "0.5"
+hit_height = 2
+dir_x = "-1.0"
+knockback = "3.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 3
+active_ticks = 9
+
+[node name="BoxDraw" parent="." index="5"]
+position = Vector2( 0, -9 )
+
+[node name="IndicatorDraw" parent="." index="6"]
+position = Vector2( 0, -9 )

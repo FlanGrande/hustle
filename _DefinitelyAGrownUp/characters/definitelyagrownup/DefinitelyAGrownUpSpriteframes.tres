@@ -1,0 +1,296 @@
+[gd_resource type="SpriteFrames" load_steps=87 format=2]
+
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/knockdown.png" type="Texture" id=1]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/baby_slap_0001.png" type="Texture" id=2]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/baby_slap_0003.png" type="Texture" id=3]
+[ext_resource path="res://characters/stickman/sprites/stickman59.png" type="Texture" id=4]
+[ext_resource path="res://characters/stickman/sprites/stickman60.png" type="Texture" id=5]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/move_forward.png" type="Texture" id=6]
+[ext_resource path="res://characters/stickman/sprites/stickman32.png" type="Texture" id=7]
+[ext_resource path="res://characters/stickman/sprites/stickman61.png" type="Texture" id=8]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/move_backwards.png" type="Texture" id=9]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/jump/jump.png" type="Texture" id=10]
+[ext_resource path="res://characters/stickman/sprites/stickman33.png" type="Texture" id=11]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/landing.png" type="Texture" id=12]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/burst.png" type="Texture" id=13]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/aerial_hurt.png" type="Texture" id=14]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/wall_slam.png" type="Texture" id=15]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/baby_slap_0002.png" type="Texture" id=16]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/baby_slap_0004.png" type="Texture" id=17]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/ground_hurt_high/ground_hurt_high_bl.png" type="Texture" id=18]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_headbutt/baby_headbutt_0006.png" type="Texture" id=19]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/wait/wait_bl.png" type="Texture" id=20]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/flurry/flurry_low_punch.png" type="Texture" id=21]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/flurry/flurry_low_punch_bl.png" type="Texture" id=22]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/flurry/flurry_mid_punch_bl.png" type="Texture" id=23]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/flurry/flurry_high_punch.png" type="Texture" id=24]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_kid_stomp/fat_kid_stomp.png" type="Texture" id=25]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/baby_boomerang_0004.png" type="Texture" id=26]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/baby_boomerang_0001.png" type="Texture" id=27]
+[ext_resource path="res://characters/stickman/sprites/stickman58.png" type="Texture" id=28]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/get_up/get_up_bl.png" type="Texture" id=29]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/baby_boomerang_0005.png" type="Texture" id=30]
+[ext_resource path="res://characters/stickman/sprites/stickman38.png" type="Texture" id=31]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/baby_boomerang_0003.png" type="Texture" id=32]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_boomerang/baby_boomerang_0002.png" type="Texture" id=33]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_headbutt/baby_headbutt_0002.png" type="Texture" id=34]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_headbutt/baby_headbutt_0001.png" type="Texture" id=35]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/jump/jump_bl.png" type="Texture" id=36]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/ground_hurt_high/ground_hurt_high.png" type="Texture" id=37]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/get_up/get_up.png" type="Texture" id=38]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/wait/wait.png" type="Texture" id=39]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_headbutt/baby_headbutt_0007.png" type="Texture" id=40]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_headbutt/baby_headbutt_0005.png" type="Texture" id=41]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_headbutt/baby_headbutt_0004.png" type="Texture" id=42]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_headbutt/baby_headbutt_0003.png" type="Texture" id=43]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/flurry/flurry_mid_punch.png" type="Texture" id=44]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/flurry/flurry_low_kick_bl.png" type="Texture" id=45]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/flurry/flurry_low_kick.png" type="Texture" id=46]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000023.png" type="Texture" id=47]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000025.png" type="Texture" id=48]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000018.png" type="Texture" id=49]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000024.png" type="Texture" id=50]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000007.png" type="Texture" id=51]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000012.png" type="Texture" id=52]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000017.png" type="Texture" id=53]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000005.png" type="Texture" id=54]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000011.png" type="Texture" id=55]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000006.png" type="Texture" id=56]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000016.png" type="Texture" id=57]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000008.png" type="Texture" id=58]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000001.png" type="Texture" id=59]
+[ext_resource path="res://characters/stickman/sprites/stickman9.png" type="Texture" id=60]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000004.png" type="Texture" id=61]
+[ext_resource path="res://characters/stickman/sprites/stickman6.png" type="Texture" id=62]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000009.png" type="Texture" id=63]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000010.png" type="Texture" id=64]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000013.png" type="Texture" id=65]
+[ext_resource path="res://characters/stickman/sprites/stickman7.png" type="Texture" id=66]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000014.png" type="Texture" id=67]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000019.png" type="Texture" id=68]
+[ext_resource path="res://characters/stickman/sprites/stickman8.png" type="Texture" id=69]
+[ext_resource path="res://characters/stickman/sprites/stickman18.png" type="Texture" id=70]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000021.png" type="Texture" id=71]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000022.png" type="Texture" id=72]
+[ext_resource path="res://characters/stickman/sprites/stickman57.png" type="Texture" id=73]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000020.png" type="Texture" id=74]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000015.png" type="Texture" id=75]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000002.png" type="Texture" id=76]
+[ext_resource path="res://characters/stickman/sprites/stickman5.png" type="Texture" id=77]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000003.png" type="Texture" id=78]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000026.png" type="Texture" id=79]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000028.png" type="Texture" id=80]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000031.png" type="Texture" id=81]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000029.png" type="Texture" id=82]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000033.png" type="Texture" id=83]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000027.png" type="Texture" id=84]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000032.png" type="Texture" id=85]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000030.png" type="Texture" id=86]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 33 ), ExtResource( 32 ), ExtResource( 26 ), ExtResource( 30 ) ],
+"loop": true,
+"name": "BabyBoomerang",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 34 ), ExtResource( 43 ), ExtResource( 42 ), ExtResource( 41 ), ExtResource( 19 ), ExtResource( 40 ) ],
+"loop": true,
+"name": "BabyHeadbutt",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 16 ), ExtResource( 3 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "BabySlap",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 13 ) ],
+"loop": true,
+"name": "Burst",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "DashBackward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ) ],
+"loop": true,
+"name": "DashForward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 62 ), ExtResource( 66 ), ExtResource( 69 ) ],
+"loop": true,
+"name": "DoubleJump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 44 ), ExtResource( 44 ) ],
+"loop": true,
+"name": "DoubleSlap",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "DoubleSlapBL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "FatKidStomp",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 59 ), ExtResource( 76 ), ExtResource( 78 ), ExtResource( 61 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 51 ), ExtResource( 58 ), ExtResource( 63 ), ExtResource( 64 ), ExtResource( 55 ), ExtResource( 52 ), ExtResource( 65 ), ExtResource( 67 ), ExtResource( 75 ), ExtResource( 57 ), ExtResource( 53 ), ExtResource( 49 ), ExtResource( 68 ), ExtResource( 74 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 47 ), ExtResource( 50 ), ExtResource( 48 ), ExtResource( 79 ), ExtResource( 84 ), ExtResource( 80 ), ExtResource( 82 ), ExtResource( 86 ), ExtResource( 81 ), ExtResource( 85 ), ExtResource( 83 ) ],
+"loop": true,
+"name": "FatSlam",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 24 ), ExtResource( 44 ), ExtResource( 21 ), ExtResource( 46 ) ],
+"loop": true,
+"name": "FlurryHiLo",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 22 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "FlurryHiLoBL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 21 ), ExtResource( 44 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "FlurryLoHi",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 22 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "FlurryLoHiBL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "ForwardThrow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ) ],
+"loop": true,
+"name": "Getup",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "GetupBL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 73 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ), ExtResource( 28 ) ],
+"loop": true,
+"name": "Grab",
+"speed": 60.0
+}, {
+"frames": [ ExtResource( 77 ) ],
+"loop": true,
+"name": "Grabbed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "HurtAerial",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 37 ) ],
+"loop": true,
+"name": "HurtGroundedHigh",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "HurtGroundedHighBL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 70 ) ],
+"loop": true,
+"name": "HurtGroundedLow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ) ],
+"loop": true,
+"name": "HurtGroundedMid",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ) ],
+"loop": true,
+"name": "InstantCancel",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "JumpBL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 69 ), ExtResource( 66 ), ExtResource( 62 ) ],
+"loop": true,
+"name": "JumpBack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Knockdown",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "Landing",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "ParryHigh",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "ParryLow",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 69 ), ExtResource( 66 ), ExtResource( 62 ), ExtResource( 77 ) ],
+"loop": true,
+"name": "RollBackward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 77 ), ExtResource( 62 ), ExtResource( 66 ), ExtResource( 69 ) ],
+"loop": true,
+"name": "RollForward",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "ThrowTech",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ) ],
+"loop": true,
+"name": "TwisterinoSlapperino",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "TwisterinoSlapperinoBL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ) ],
+"loop": true,
+"name": "Wait",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "WaitBL",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ) ],
+"loop": true,
+"name": "WallSlam",
+"speed": 5.0
+} ]

@@ -1,0 +1,1061 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
+[ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=2]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/DefinitelyAGrownUpSpriteframes.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/EmptyState.gd" type="Script" id=4]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/icons/special.png" type="Texture" id=5]
+[ext_resource path="res://mechanics/Hitbox.gd" type="Script" id=6]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/BoomerangKid.gd" type="Script" id=7]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/icons/kid_slap.png" type="Texture" id=8]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/TopButt.gd" type="Script" id=9]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/portrait/portrait.png" type="Texture" id=10]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/ui/BoomerangKidActionUIData.tscn" type="PackedScene" id=11]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/DefinitelyNotAGrownUp.gd" type="Script" id=12]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/BabylessKick.gd" type="Script" id=13]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/BabylessCatchTheBaby.gd" type="Script" id=14]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/SuperBaby.gd" type="Script" id=15]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/TwisterinoSlaperino.gd" type="Script" id=16]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/BabylessPunch.gd" type="Script" id=17]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/DefinitelyAGrownUpExtra.tscn" type="PackedScene" id=18]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/ui/BabylessKickActionUIData.tscn" type="PackedScene" id=19]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/SuperBabyOff.gd" type="Script" id=20]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/BabylessSuperPunch.gd" type="Script" id=21]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/use_extra_color_1 = false
+shader_param/use_extra_color_2 = false
+shader_param/extra_replace_color_1 = Color( 1, 0, 1, 1 )
+shader_param/extra_replace_color_2 = Color( 1, 0, 1, 1 )
+shader_param/color = Color( 1, 1, 1, 1 )
+shader_param/extra_color_1 = Color( 1, 1, 1, 1 )
+shader_param/extra_color_2 = Color( 1, 1, 1, 1 )
+shader_param/max_color_distance = 0.01
+shader_param/super_dim = false
+shader_param/use_outline = false
+shader_param/outline_color = Color( 0, 0, 0, 1 )
+
+[node name="DefinitelyAGrownUp" instance=ExtResource( 2 )]
+script = ExtResource( 12 )
+__meta__ = {
+"_editor_description_": ""
+}
+extra_state_variables = "is_baby_coming_back"
+character_portrait = ExtResource( 10 )
+character_portrait2 = ExtResource( 10 )
+player_extra_params_scene = ExtResource( 18 )
+
+[node name="Sprite" parent="Flip" index="0"]
+material = SubResource( 1 )
+frames = ExtResource( 3 )
+animation = "FatSlam"
+
+[node name="ParrySuper" parent="StateMachine" index="1"]
+change_stance_to = ""
+
+[node name="ParryHigh" parent="StateMachine" index="2"]
+change_stance_to = ""
+
+[node name="ParryAuto" parent="StateMachine" index="4"]
+change_stance_to = ""
+
+[node name="ParryLow" parent="StateMachine" index="5"]
+change_stance_to = ""
+
+[node name="ParryAir" parent="StateMachine" index="6"]
+change_stance_to = ""
+
+[node name="Wait" parent="StateMachine" index="11"]
+allowed_stances_string = "Normal
+Babyless"
+
+[node name="Burst" parent="StateMachine" index="12"]
+change_stance_to = ""
+
+[node name="DefensiveBurst" parent="StateMachine" index="13"]
+change_stance_to = ""
+
+[node name="OffensiveBurst" parent="StateMachine" index="14"]
+change_stance_to = ""
+
+[node name="CounterAttackHi" parent="StateMachine" index="15"]
+change_stance_to = ""
+
+[node name="CounterAttackLow" parent="StateMachine" index="16"]
+change_stance_to = ""
+
+[node name="CounterAttackGrab" parent="StateMachine" index="17"]
+change_stance_to = ""
+
+[node name="Landing" parent="StateMachine" index="21"]
+change_stance_to = ""
+
+[node name="Knockdown" parent="StateMachine" index="22"]
+change_stance_to = ""
+
+[node name="HardKnockdown" parent="StateMachine" index="23"]
+change_stance_to = ""
+
+[node name="DashForward" parent="StateMachine" index="27"]
+change_stance_to = ""
+
+[node name="ChargeDashForward" parent="StateMachine" index="28"]
+change_stance_to = ""
+
+[node name="DashBackward" parent="StateMachine" index="29"]
+change_stance_to = ""
+
+[node name="DashBackwardHold" parent="StateMachine" index="30"]
+change_stance_to = ""
+
+[node name="DashStartup" parent="StateMachine" index="31"]
+change_stance_to = ""
+
+[node name="Jump" parent="StateMachine" index="32"]
+change_stance_to = ""
+
+[node name="SuperJump" parent="StateMachine" index="34"]
+change_stance_to = ""
+
+[node name="InstantCancel" parent="StateMachine" index="37"]
+change_stance_to = ""
+
+[node name="WhiffInstantCancel" parent="StateMachine" index="38"]
+change_stance_to = ""
+
+[node name="HurtDizzy" parent="StateMachine" index="39"]
+change_stance_to = ""
+
+[node name="HurtAerial" parent="StateMachine" index="41"]
+change_stance_to = ""
+
+[node name="HurtGrounded" parent="StateMachine" index="42"]
+change_stance_to = ""
+
+[node name="Grab" parent="StateMachine" index="46"]
+change_stance_to = ""
+
+[node name="AirGrab" parent="StateMachine" index="47"]
+change_stance_to = ""
+
+[node name="JumpGrab" parent="StateMachine" index="48"]
+change_stance_to = ""
+
+[node name="Template" type="Node2D" parent="StateMachine" index="54"]
+script = ExtResource( 4 )
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/Template" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 23
+y = -30
+width = 16
+height = 16
+damage = 60
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+beats_grab = false
+hits_projectiles = false
+dir_y = "0"
+knockback = "5"
+start_tick = 4
+active_ticks = 2
+
+[node name="BabySlap" type="Node2D" parent="StateMachine" index="55"]
+script = ExtResource( 4 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+anim_length = 16
+ticks_per_frame = 3
+enter_force_dir_x = "1.0"
+enter_force_speed = "5"
+title = "Baby Slap"
+type = 1
+button_texture = ExtResource( 8 )
+self_hit_cancellable = false
+self_interruptable = false
+interrupt_from_string = "GroundedAttack
+GroundedLight
+Grounded"
+interrupt_into_string = "Grounded
+Aerial"
+hit_cancel_into_string = "GroundedAttack
+GroundedSpecial
+GroundedSuper
+AerialAttack
+AerialSpecial
+AerialSuper
+Jump"
+allowed_stances_string = "Normal
+Flurry"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/BabySlap" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 23
+y = -30
+width = 16
+height = 16
+damage = 60
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+beats_grab = false
+hits_projectiles = false
+dir_y = "0"
+knockback = "5"
+start_tick = 4
+active_ticks = 2
+
+[node name="BabyHeadbutt" type="Node2D" parent="StateMachine" index="56"]
+script = ExtResource( 9 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+anim_length = 14
+ticks_per_frame = 2
+title = "Baby Headbutt"
+type = 1
+button_texture = ExtResource( 8 )
+air_type = 2
+self_hit_cancellable = false
+self_interruptable = false
+interrupt_from_string = "Grounded
+Aerial"
+interrupt_into_string = "Grounded
+Aerial"
+hit_cancel_into_string = "Grounded
+Aerial"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/BabyHeadbutt" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+y = -64
+width = 8
+height = 12
+damage = 80
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+beats_grab = false
+hits_projectiles = false
+dir_x = "0"
+knockback = "5"
+start_tick = 7
+active_ticks = 4
+
+[node name="DoubleSlap" type="Node2D" parent="StateMachine" index="57"]
+script = ExtResource( 4 )
+apply_forces = true
+apply_grav = true
+reset_x_momentum = true
+anim_length = 32
+ticks_per_frame = 8
+enter_force_dir_x = "1"
+enter_force_speed = "2"
+title = "Double Slap"
+type = 1
+button_texture = ExtResource( 8 )
+busy_interrupt_type = 2
+burst_cancellable = false
+burstable = false
+self_hit_cancellable = false
+self_interruptable = false
+reversible = false
+instant_cancellable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Normal
+Babyless"
+
+[node name="FlurryMidPunch" type="Node2D" parent="StateMachine/DoubleSlap" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 12
+y = -26
+width = 8
+height = 4
+damage = 20
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+dir_y = "0"
+knockback = "2"
+pushback_x = "0"
+start_tick = 7
+active_ticks = 2
+
+[node name="FlurryMidPunch2" type="Node2D" parent="StateMachine/DoubleSlap" index="1"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 20
+y = -26
+width = 14
+height = 6
+damage = 100
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+beats_grab = false
+hits_projectiles = false
+group = 1
+dir_y = "0"
+knockback = "10"
+pushback_x = "0"
+wall_slam = true
+start_tick = 28
+active_ticks = 4
+
+[node name="FatSlam" type="Node2D" parent="StateMachine" index="58"]
+script = ExtResource( 4 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+anim_length = 48
+force_dir_x = "-1.0"
+force_speed = "8.0"
+force_tick = 16
+enter_force_dir_x = "1.0"
+enter_force_speed = "12.0"
+title = "FAT SLAM!"
+type = 1
+button_texture = ExtResource( 8 )
+self_hit_cancellable = false
+self_interruptable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Normal
+Babyless"
+
+[node name="HitboxFront" type="Node2D" parent="StateMachine/FatSlam" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 32
+y = -24
+width = 24
+height = 24
+damage = 100
+hitstun_ticks = 16
+hitlag_ticks = 5
+victim_hitlag = 5
+beats_grab = false
+hits_projectiles = false
+guard_break = true
+dir_y = "0"
+knockback = "-10.0"
+start_tick = 10
+active_ticks = 4
+
+[node name="HitboxBack" type="Node2D" parent="StateMachine/FatSlam" index="1"]
+z_index = 1000
+script = ExtResource( 6 )
+x = -32
+y = -24
+width = 24
+height = 24
+damage = 120
+hitstun_ticks = 40
+hitlag_ticks = 5
+victim_hitlag = 5
+beats_grab = false
+hits_projectiles = false
+group = 1
+dir_x = "-0.6"
+knockback = "5.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 24
+active_ticks = 6
+
+[node name="FatKidStomp" type="Node2D" parent="StateMachine" index="59"]
+script = ExtResource( 4 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+reset_y_momentum = true
+apply_forces_no_limit = true
+anim_length = 40
+enter_force_dir_y = "1.0"
+enter_force_speed = "13"
+title = "Fat Kid Stomp"
+type = 1
+button_texture = ExtResource( 8 )
+air_type = 1
+land_cancel = true
+self_hit_cancellable = false
+self_interruptable = false
+interrupt_from_string = "Aerial
+AerialAttack"
+interrupt_into_string = "Aerial
+Grounded"
+hit_cancel_into_string = "Aerial
+Grounded"
+allowed_stances_string = "Normal
+Babyless"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/FatKidStomp" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+width = 16
+height = 8
+damage = 80
+hitstun_ticks = 18
+beats_grab = false
+dir_x = "0.0"
+dir_y = "1.0"
+grounded_hit_state = "HurtAerial"
+start_tick = 4
+always_on = true
+
+[node name="BabyBoomerang" type="Node2D" parent="StateMachine" index="60"]
+script = ExtResource( 7 )
+apply_forces = true
+apply_fric = true
+apply_grav = true
+anim_length = 30
+sprite_anim_length = 5
+ticks_per_frame = 2
+title = "Baby Boomerang"
+type = 2
+data_ui_scene = ExtResource( 11 )
+button_texture = ExtResource( 5 )
+air_type = 2
+busy_interrupt_type = 2
+burst_cancellable = false
+burstable = false
+self_hit_cancellable = false
+self_interruptable = false
+instant_cancellable = false
+interrupt_from_string = "Aerial
+Grounded
+AerialSpecial
+GroundedSpecial"
+interrupt_into_string = "Aerial
+Grounded"
+change_stance_to = "Babyless"
+apply_pushback = false
+
+[node name="FlurryLoHi" type="Node2D" parent="StateMachine" index="61"]
+script = ExtResource( 4 )
+apply_forces = true
+apply_grav = true
+reset_x_momentum = true
+anim_length = 32
+ticks_per_frame = 8
+enter_force_dir_x = "1"
+enter_force_speed = "3"
+title = "Flurry Lo-Hi"
+type = 2
+button_texture = ExtResource( 5 )
+self_interruptable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+
+[node name="FlurryHighPunch" type="Node2D" parent="StateMachine/FlurryLoHi" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 12
+y = -32
+width = 8
+height = 4
+damage = 50
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "2.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 0
+dir_x = "-0.2"
+knockback = "3"
+grounded_hit_state = "HurtAerial"
+start_tick = 24
+active_ticks = 2
+
+[node name="FlurryMidPunch" type="Node2D" parent="StateMachine/FlurryLoHi" index="1"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 12
+y = -26
+width = 8
+height = 4
+damage = 30
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+group = 1
+dir_y = "0"
+knockback = "2"
+pushback_x = "0"
+start_tick = 16
+active_ticks = 8
+
+[node name="FlurryLowPunch" type="Node2D" parent="StateMachine/FlurryLoHi" index="2"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 15
+y = -15
+width = 6
+height = 6
+damage = 20
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 2
+group = 2
+dir_y = "0"
+knockback = "2"
+pushback_x = "1"
+start_tick = 8
+active_ticks = 8
+
+[node name="FlurryLowKick" type="Node2D" parent="StateMachine/FlurryLoHi" index="3"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 16
+y = -8
+width = 8
+height = 6
+damage = 20
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 2
+group = 3
+dir_y = "0"
+knockback = "2"
+start_tick = 6
+active_ticks = 8
+
+[node name="FlurryHiLo" type="Node2D" parent="StateMachine" index="62"]
+script = ExtResource( 4 )
+apply_forces = true
+apply_grav = true
+reset_x_momentum = true
+anim_length = 32
+ticks_per_frame = 8
+enter_force_dir_x = "1"
+enter_force_speed = "3"
+title = "Flurry Hi-Lo"
+type = 2
+button_texture = ExtResource( 5 )
+iasa_at = 32
+iasa_on_hit = 32
+busy_interrupt_type = 2
+burst_cancellable = false
+burstable = false
+self_hit_cancellable = false
+self_interruptable = false
+reversible = false
+instant_cancellable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+
+[node name="FlurryHighPunch" type="Node2D" parent="StateMachine/FlurryHiLo" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 12
+y = -32
+width = 8
+height = 4
+damage = 20
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 0
+dir_y = "0"
+knockback = "2"
+start_tick = 6
+active_ticks = 2
+
+[node name="FlurryMidPunch" type="Node2D" parent="StateMachine/FlurryHiLo" index="1"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 12
+y = -26
+width = 8
+height = 4
+damage = 20
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+group = 1
+dir_y = "0"
+knockback = "2"
+pushback_x = "0"
+start_tick = 8
+active_ticks = 8
+
+[node name="FlurryLowPunch" type="Node2D" parent="StateMachine/FlurryHiLo" index="2"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 15
+y = -15
+width = 6
+height = 6
+damage = 30
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 2
+group = 2
+dir_y = "0"
+knockback = "2"
+pushback_x = "1"
+start_tick = 16
+active_ticks = 8
+
+[node name="FlurryLowKick" type="Node2D" parent="StateMachine/FlurryHiLo" index="3"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 16
+y = -8
+width = 8
+height = 6
+damage = 50
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "2.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 2
+group = 3
+dir_y = "0"
+knockback = "8"
+start_tick = 24
+active_ticks = 8
+
+[node name="TwisterinoSlapperino" type="Node2D" parent="StateMachine" index="63"]
+script = ExtResource( 16 )
+__meta__ = {
+"_editor_description_": ""
+}
+apply_forces = true
+apply_fric = true
+anim_length = 42
+sfx_tick = 3
+title = "Twisterino Slapperino"
+type = 2
+button_texture = ExtResource( 5 )
+air_type = 2
+iasa_at = 42
+iasa_on_hit = 42
+iasa_on_hit_on_block = false
+end_feint = false
+busy_interrupt_type = 2
+burst_cancellable = false
+burstable = false
+self_hit_cancellable = false
+self_interruptable = false
+reversible = false
+instant_cancellable = false
+can_feint_if_possible = false
+interrupt_from_string = "Grounded
+GroundedAttack
+Aerial
+AerialAttack"
+interrupt_into_string = "Grounded
+GroundedAttack
+Aerial
+AerialAttack"
+allowed_stances_string = "Normal
+Babyless"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/TwisterinoSlapperino" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+y = -22
+width = 16
+height = 22
+damage = 30
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+beats_grab = false
+dir_y = "0"
+knockback = "3"
+start_tick = 8
+active_ticks = 2
+always_on = true
+looping = true
+loop_active_ticks = 4
+
+[node name="BabylessPunch" type="Node2D" parent="StateMachine" index="64"]
+script = ExtResource( 17 )
+anim_length = 12
+title = "Punch 'em!"
+type = 2
+button_texture = ExtResource( 5 )
+air_type = 2
+self_hit_cancellable = false
+self_interruptable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Babyless"
+
+[node name="BabylessSuperPunch" type="Node2D" parent="StateMachine" index="65"]
+script = ExtResource( 21 )
+__meta__ = {
+"_editor_description_": ""
+}
+anim_length = 20
+title = "MONSTER PUNCH"
+type = 3
+data_ui_scene = ExtResource( 19 )
+button_texture = ExtResource( 5 )
+air_type = 2
+self_hit_cancellable = false
+self_interruptable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Babyless"
+supers_used_ = 0
+
+[node name="BabylessKick" type="Node2D" parent="StateMachine" index="66"]
+script = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": ""
+}
+anim_length = 6
+title = "Kick 'em!"
+type = 2
+data_ui_scene = ExtResource( 19 )
+button_texture = ExtResource( 5 )
+air_type = 2
+self_hit_cancellable = false
+self_interruptable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Babyless"
+
+[node name="BabylessCatchTheBaby" type="Node2D" parent="StateMachine" index="67"]
+script = ExtResource( 14 )
+apply_forces = true
+anim_length = 20
+title = "Catch the baby!"
+type = 2
+button_texture = ExtResource( 5 )
+air_type = 2
+uses_air_movement = true
+burst_cancellable = false
+burstable = false
+self_hit_cancellable = false
+self_interruptable = false
+reversible = false
+instant_cancellable = false
+can_feint_if_possible = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundSpecial
+Aerial
+AerialAttack
+AerialSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundSpecial
+Aerial
+AerialAttack
+AerialSpecial"
+allowed_stances_string = "Babyless"
+
+[node name="Hitbox" type="Node2D" parent="StateMachine/BabylessCatchTheBaby" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+y = -16
+width = 10
+height = 12
+damage = 120
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+beats_grab = false
+hits_projectiles = false
+dir_y = "0"
+knockback = "10"
+start_tick = 4
+always_on = true
+
+[node name="BabylessFlurryLoHi" type="Node2D" parent="StateMachine" index="68"]
+script = ExtResource( 4 )
+apply_forces = true
+apply_grav = true
+reset_x_momentum = true
+sprite_animation = "FlurryLoHiBL"
+anim_length = 24
+ticks_per_frame = 8
+enter_force_dir_x = "1"
+enter_force_speed = "3"
+title = "Flurry Lo-Hi"
+type = 2
+button_texture = ExtResource( 5 )
+self_interruptable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Babyless"
+
+[node name="FlurryMidPunch" type="Node2D" parent="StateMachine/BabylessFlurryLoHi" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 12
+y = -26
+width = 8
+height = 4
+damage = 30
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+dir_y = "0"
+knockback = "2"
+pushback_x = "0"
+start_tick = 16
+active_ticks = 8
+
+[node name="FlurryLowPunch" type="Node2D" parent="StateMachine/BabylessFlurryLoHi" index="1"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 15
+y = -15
+width = 6
+height = 6
+damage = 20
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 2
+group = 1
+dir_y = "0"
+knockback = "2"
+pushback_x = "1"
+start_tick = 8
+active_ticks = 8
+
+[node name="FlurryLowKick" type="Node2D" parent="StateMachine/BabylessFlurryLoHi" index="2"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 16
+y = -8
+width = 8
+height = 6
+damage = 20
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 2
+group = 2
+dir_y = "0"
+knockback = "2"
+start_tick = 6
+active_ticks = 8
+
+[node name="BabylessFlurryHiLo" type="Node2D" parent="StateMachine" index="69"]
+script = ExtResource( 4 )
+apply_forces = true
+apply_grav = true
+reset_x_momentum = true
+sprite_animation = "FlurryHiLoBL"
+anim_length = 24
+ticks_per_frame = 8
+enter_force_dir_x = "1"
+enter_force_speed = "3"
+title = "Flurry Hi-Lo"
+type = 2
+button_texture = ExtResource( 5 )
+iasa_at = 32
+iasa_on_hit = 32
+busy_interrupt_type = 2
+burst_cancellable = false
+burstable = false
+self_hit_cancellable = false
+self_interruptable = false
+reversible = false
+instant_cancellable = false
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Babyless"
+
+[node name="FlurryMidPunch" type="Node2D" parent="StateMachine/BabylessFlurryHiLo" index="0"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 12
+y = -26
+width = 8
+height = 4
+damage = 20
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+dir_y = "0"
+knockback = "2"
+pushback_x = "0"
+start_tick = 8
+active_ticks = 8
+
+[node name="FlurryLowPunch" type="Node2D" parent="StateMachine/BabylessFlurryHiLo" index="1"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 15
+y = -15
+width = 6
+height = 6
+damage = 30
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "0.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 2
+group = 1
+dir_y = "0"
+knockback = "2"
+pushback_x = "1"
+start_tick = 16
+active_ticks = 8
+
+[node name="FlurryLowKick" type="Node2D" parent="StateMachine/BabylessFlurryHiLo" index="2"]
+z_index = 1000
+script = ExtResource( 6 )
+x = 16
+y = -8
+width = 8
+height = 6
+damage = 50
+hitstun_ticks = 25
+hitlag_ticks = 5
+victim_hitlag = 5
+cancellable = false
+di_modifier = "2.0"
+beats_grab = false
+hits_projectiles = false
+hit_height = 2
+group = 2
+dir_y = "0"
+knockback = "8"
+start_tick = 24
+active_ticks = 8
+
+[node name="SuperBaby" type="Node2D" parent="StateMachine" index="70"]
+script = ExtResource( 15 )
+title = "MONSTER BABY"
+type = 3
+button_texture = ExtResource( 5 )
+air_type = 2
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Babyless"
+super_level_ = 3
+supers_used_ = 0
+super_effect_ = true
+
+[node name="SuperBabyOff" type="Node2D" parent="StateMachine" index="71"]
+script = ExtResource( 20 )
+__meta__ = {
+"_editor_description_": ""
+}
+title = "PLEASE BABY STOP! TT^TT"
+type = 3
+button_texture = ExtResource( 5 )
+air_type = 2
+interrupt_from_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+interrupt_into_string = "Grounded
+GroundedAttack
+GroundedSpecial"
+allowed_stances_string = "Babyless"
+
+[node name="ThrowTech" parent="StateMachine" index="72"]
+change_stance_to = ""
