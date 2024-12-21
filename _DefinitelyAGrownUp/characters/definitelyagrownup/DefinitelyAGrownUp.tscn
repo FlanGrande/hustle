@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://characters/BaseChar.gdshader" type="Shader" id=1]
 [ext_resource path="res://characters/BaseChar.tscn" type="PackedScene" id=2]
@@ -21,6 +21,9 @@
 [ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/ui/BabylessKickActionUIData.tscn" type="PackedScene" id=19]
 [ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/SuperBabyOff.gd" type="Script" id=20]
 [ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/BabylessSuperPunch.gd" type="Script" id=21]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/ui/SpitActionUIData.tscn" type="PackedScene" id=22]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/states/Spit.gd" type="Script" id=23]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/projectiles/SpitProjectile.tscn" type="PackedScene" id=24]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -732,7 +735,27 @@ always_on = true
 looping = true
 loop_active_ticks = 4
 
-[node name="BabylessPunch" type="Node2D" parent="StateMachine" index="64"]
+[node name="Spit" type="Node2D" parent="StateMachine" index="64"]
+script = ExtResource( 23 )
+__meta__ = {
+"_editor_description_": ""
+}
+reset_momentum = true
+anim_length = 13
+title = "Spit"
+type = 2
+data_ui_scene = ExtResource( 22 )
+button_texture = ExtResource( 5 )
+air_type = 2
+interrupt_from_string = "GroundedSpecial
+Grounded"
+interrupt_into_string = "Grounded
+Aerial"
+projectile = ExtResource( 24 )
+projectile_x = 8
+projectile_y = -36
+
+[node name="BabylessPunch" type="Node2D" parent="StateMachine" index="65"]
 script = ExtResource( 17 )
 anim_length = 12
 title = "Punch 'em!"
@@ -749,7 +772,7 @@ GroundedAttack
 GroundedSpecial"
 allowed_stances_string = "Babyless"
 
-[node name="BabylessSuperPunch" type="Node2D" parent="StateMachine" index="65"]
+[node name="BabylessSuperPunch" type="Node2D" parent="StateMachine" index="66"]
 script = ExtResource( 21 )
 __meta__ = {
 "_editor_description_": ""
@@ -771,7 +794,7 @@ GroundedSpecial"
 allowed_stances_string = "Babyless"
 supers_used_ = 0
 
-[node name="BabylessKick" type="Node2D" parent="StateMachine" index="66"]
+[node name="BabylessKick" type="Node2D" parent="StateMachine" index="67"]
 script = ExtResource( 13 )
 __meta__ = {
 "_editor_description_": ""
@@ -792,7 +815,7 @@ GroundedAttack
 GroundedSpecial"
 allowed_stances_string = "Babyless"
 
-[node name="BabylessCatchTheBaby" type="Node2D" parent="StateMachine" index="67"]
+[node name="BabylessCatchTheBaby" type="Node2D" parent="StateMachine" index="68"]
 script = ExtResource( 14 )
 apply_forces = true
 anim_length = 20
@@ -839,7 +862,7 @@ knockback = "10"
 start_tick = 4
 always_on = true
 
-[node name="BabylessFlurryLoHi" type="Node2D" parent="StateMachine" index="68"]
+[node name="BabylessFlurryLoHi" type="Node2D" parent="StateMachine" index="69"]
 script = ExtResource( 4 )
 apply_forces = true
 apply_grav = true
@@ -927,7 +950,7 @@ knockback = "2"
 start_tick = 6
 active_ticks = 8
 
-[node name="BabylessFlurryHiLo" type="Node2D" parent="StateMachine" index="69"]
+[node name="BabylessFlurryHiLo" type="Node2D" parent="StateMachine" index="70"]
 script = ExtResource( 4 )
 apply_forces = true
 apply_grav = true
@@ -1023,7 +1046,7 @@ knockback = "8"
 start_tick = 24
 active_ticks = 8
 
-[node name="SuperBaby" type="Node2D" parent="StateMachine" index="70"]
+[node name="SuperBaby" type="Node2D" parent="StateMachine" index="71"]
 script = ExtResource( 15 )
 title = "MONSTER BABY"
 type = 3
@@ -1040,7 +1063,7 @@ super_level_ = 3
 supers_used_ = 0
 super_effect_ = true
 
-[node name="SuperBabyOff" type="Node2D" parent="StateMachine" index="71"]
+[node name="SuperBabyOff" type="Node2D" parent="StateMachine" index="72"]
 script = ExtResource( 20 )
 __meta__ = {
 "_editor_description_": ""
@@ -1057,5 +1080,5 @@ GroundedAttack
 GroundedSpecial"
 allowed_stances_string = "Babyless"
 
-[node name="ThrowTech" parent="StateMachine" index="72"]
+[node name="ThrowTech" parent="StateMachine" index="73"]
 change_stance_to = ""
