@@ -18,14 +18,14 @@ func _enter():
 	projectile_spawned = false
 
 func _frame_0():
-	var baby_position = host.objs_map[host.baby_projectile].get_pos()
-	projectile_x = baby_position.x
-	projectile_y = baby_position.y
+	var baby = host.objs_map[host.baby_projectile]
 	
 	if data:
 		dir = xy_to_dir(data.x, data.y)
 	
 	projectile_spawned = true
-	var object = host.spawn_object(projectile, projectile_x, projectile_y, true, {"dir": dir})
+	baby.spawn_object(projectile, 0, 0, true, {"dir": dir})
+	# TO DO: Change spawn origin if the baby is standing and later on if it's on super mode
 
-# TO DO: is usable
+func is_usable():
+	return .is_usable() and host.baby_projectile and host.is_babyless and not host.is_baby_exploding 
