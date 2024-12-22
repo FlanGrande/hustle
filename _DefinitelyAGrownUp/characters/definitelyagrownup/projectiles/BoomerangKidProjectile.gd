@@ -49,6 +49,11 @@ func _tick():
 		
 		if host.creator.is_baby_coming_back:
 			move_vec = fixed.vec_mul(target_direction.x, target_direction.y, host.come_back_speed)
+			
+			# TO DO: Make it more Sonic like, maybe with some build up too
+			if host.is_grounded():
+				move_vec.y = "0"
+			
 			host.set_vel(move_vec.x, move_vec.y)
 		
 		host.apply_forces()
