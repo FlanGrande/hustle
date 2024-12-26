@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/baby_slap_0004.png-dc65c726409a701ca04bc7270ea55e4a.stex"
+path="res://.import/kid_slap_0006.png-773f8993732bc1c779fa96ffc9f74e65.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/baby_slap_0004.png"
-dest_files=[ "res://.import/baby_slap_0004.png-dc65c726409a701ca04bc7270ea55e4a.stex" ]
+source_file="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/kid_slap_0006.png"
+dest_files=[ "res://.import/kid_slap_0006.png-773f8993732bc1c779fa96ffc9f74e65.stex" ]
 
 [params]
 
