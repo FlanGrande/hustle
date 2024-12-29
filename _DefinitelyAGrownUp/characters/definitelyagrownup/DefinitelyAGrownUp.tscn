@@ -74,6 +74,11 @@ change_stance_to = ""
 [node name="ParryAir" parent="StateMachine" index="6"]
 change_stance_to = ""
 
+[node name="Roll" parent="StateMachine" index="7"]
+sprite_anim_length = 7
+ticks_per_frame = 2
+loop_animation = false
+
 [node name="Wait" parent="StateMachine" index="11"]
 allowed_stances_string = "Normal
 Babyless"

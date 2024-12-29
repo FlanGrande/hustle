@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=89 format=2]
+[gd_resource type="SpriteFrames" load_steps=96 format=2]
 
 [ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/knockdown.png" type="Texture" id=1]
 [ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/kid_slap_0003.png" type="Texture" id=2]
@@ -88,6 +88,13 @@
 [ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/fat_slam/00000030.png" type="Texture" id=86]
 [ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/kid_slap_0001.png" type="Texture" id=87]
 [ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/baby_slap/kid_slap_0002.png" type="Texture" id=88]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/dodge/dodge_0004.png" type="Texture" id=89]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/dodge/dodge_0005.png" type="Texture" id=90]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/dodge/dodge_0007.png" type="Texture" id=91]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/dodge/dodge_0006.png" type="Texture" id=92]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/dodge/dodge_0001.png" type="Texture" id=93]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/dodge/dodge_0002.png" type="Texture" id=94]
+[ext_resource path="res://_DefinitelyAGrownUp/characters/definitelyagrownup/sprites/dodge/dodge_0003.png" type="Texture" id=95]
 
 [resource]
 animations = [ {
@@ -251,12 +258,12 @@ animations = [ {
 "name": "ParryLow",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 69 ), ExtResource( 66 ), ExtResource( 62 ), ExtResource( 77 ) ],
+"frames": [ ExtResource( 93 ), ExtResource( 94 ), ExtResource( 90 ), ExtResource( 89 ), ExtResource( 95 ), ExtResource( 92 ), ExtResource( 91 ) ],
 "loop": true,
 "name": "RollBackward",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 77 ), ExtResource( 62 ), ExtResource( 66 ), ExtResource( 69 ) ],
+"frames": [ ExtResource( 93 ), ExtResource( 94 ), ExtResource( 95 ), ExtResource( 89 ), ExtResource( 90 ), ExtResource( 92 ), ExtResource( 91 ) ],
 "loop": true,
 "name": "RollForward",
 "speed": 5.0
