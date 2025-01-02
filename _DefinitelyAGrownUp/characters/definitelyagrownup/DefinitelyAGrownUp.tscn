@@ -53,6 +53,10 @@ extra_state_variables = "is_baby_coming_back"
 character_portrait = ExtResource( 10 )
 character_portrait2 = ExtResource( 10 )
 player_extra_params_scene = ExtResource( 18 )
+use_extra_color_1 = true
+extra_color_1 = Color( 0.564706, 0.211765, 0.054902, 1 )
+use_extra_color_2 = true
+extra_color_2 = Color( 0.419608, 0.12549, 0, 1 )
 
 [node name="Sprite" parent="Flip" index="0"]
 material = SubResource( 1 )
